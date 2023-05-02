@@ -10,7 +10,7 @@ public class MazeMaker : MonoBehaviour
     bool hasExit = false;
 
     //GridLevel levelOne;
-    GridLevelWithRooms levelOne;
+    GridLevel levelOne;
     GameObject wallPrefab;
     GameObject blockerPrefab;
 
@@ -65,7 +65,7 @@ public class MazeMaker : MonoBehaviour
             mazeHeight = (int)Random.Range(10f, 20f);
             mazeStart = new Location((int)Random.Range(0f, mazeWidth - 1), 0);
             //levelOne = new GridLevel(mazeWidth, mazeHeight);
-            levelOne = new GridLevelWithRooms(mazeWidth, mazeHeight);
+            levelOne = new GridLevel(mazeWidth, mazeHeight);
             generateMaze(levelOne, mazeStart);
             MakeDoorway(mazeStart);
             if (hasExit)
